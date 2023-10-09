@@ -1,26 +1,33 @@
-body{
+body {
     background-color: aquamarine;
 }
-*{
-    margin:0;
-    padding:0;
+
+* {
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
-nav{
+
+nav {
     margin: 0;
     display: flex;
     justify-content: space-between;
     background-color: #578c7b;
+    /*background-image: linear-gradient(to top, #3167b8, #82478b, #8f3352, #793622, #523d05);
+    */
     padding: 15px;
     overflow: hidden;
     align-items: center;
     border-bottom-left-radius: 15px;
     border-bottom-right-radius: 15px;
+    border-radius: 15px;
 }
-.navbar-mainlogo{
+
+.navbar-mainlogo {
     padding-left: 35px;
 }
-.navbar-mainhead{
+
+.navbar-mainhead {
     font-family: 'Roboto', sans-serif;
     padding-left: 155px;
     transition: transform 0.3s ease;
@@ -30,182 +37,173 @@ nav{
     text-transform: uppercase;
     letter-spacing: 2px;
 }
-h1{
-    transition: transform 0.3s ease;
-}
-h1:hover{
-    transform: scale(1.2);
-}
-.navbar-mainhead:hover{
+
+.navbar-mainhead:hover {
     transform: scale(1.2);
     /*color:chocolate;*/
 }
-.navbar-mainsocials{
+
+.navbar-mainsocials {
     padding: 15px;
     padding-right: 50px;
     display: flex;
     justify-content: space-between;
 }
-.navbar-n{
+
+.navbar-n {
     padding: 2px;
     border-radius: 50%;
-    width:40px;
-    height:40px;
+    width: 40px;
+    height: 40px;
     transition: transform 0.3s ease;
 }
-.navbar-n:hover{            
+
+.navbar-n:hover {
     border-radius: 50%;
     transform: scale(1.5);
 }
-.main-outer{
+
+.main-outer {
     margin: 10px;
     padding: 10px;
-    background-color: pink;
     align-items: center;
-    border-radius: 0.75%;
-}
-.namepfpbio{
-    justify-content: center;
+    border-radius: 2%;
     display: flex;
-    padding: 10px;
-    background-color: aqua;
-    border-radius: 20px;
-}
-.namebio{
-    width: 70%;
-    padding: 10px;
-    padding-left: 40px;
     justify-content: center;
+    flex-direction: column;
+}
+
+.secnav{
+    width: 100%;
+    padding: 10px;
+}
+
+.linnk{
     font-size: 25px;
 }
-.namebio span u {
-    text-decoration: underline;
-    font-size: 40px;
-    font-family: Georgia;
+
+a{
+    color: wheat;
 }
 
-.pfp{
-    width: 30%;
+.titlemsa {
+    font-family: cursive;
 }
-.pfp img{
+
+.image-container {
+    position: relative;
+    display: inline block;
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
+    border-radius: 3%;
+}
+
+.image-container img {
+    width: 100%;
+    height: 800px;
+    margin: 0;
+    padding: 0;
+}
+
+.text-overlay {
+    position: absolute;
+    top: 15%;
+    right: 5%;
+    transform: translateY(-50%);
+    padding: 10px;
+    max-width: 50%;
+    font-size: 50px;
+    color: white;
+    font-weight: bold;
+}
+
+p {
+    text-align: center;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 400px);
+    grid-template-rows: repeat(2, 300px);
+    grid-gap: 25px;
+    background-color: #578c7b;
+    padding: 20px;
+    border-radius: 5%;
+}
+
+.box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    border-radius: 10%;
+    flex-direction: column;
+    position: relative;
+    display: inline-block;
+}
+.crs{
+    width: 100%;
+    height: 100%;
+    transition: transform 0.6s ease;
+    border-radius: 10%;
+    position: relative;
+}
+.crs:hover {
+    transform: scale(1.05);
+    color: transparent;
+}
+.tover{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Background color with transparency */
+    padding: 10px;
+    text-align: center;
+    visibility: hidden;
+    font-size: 40px;
+    color: black;
+}
+.tover::after{
+    color: black;
+}
+.box:hover img{
+    opacity: 0.7;
+}
+.box:hover .tover{
+    visibility: visible;
+}
+.click-more {
+    cursor: pointer;
+    font-size: 18px;
+    color: blue;
+}
+.contact{
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    background-color: cadetblue;
     border-radius: 5px;
     width: 100%;
-}
-
-.contactdetails{
-    background-color: deepskyblue ;
-    border-radius: 10px;
     padding: 10px;
 }
-.contactdetails h1{
-    padding: 30px;
-    font-size: 30px;
-    text-decoration-line: underline;
-}
-.contactdetails table{
-    text-align: center;
-}
-
-
-.skillproj{
-    justify-content: space-evenly;
+.pt1{
+    width: 50%;
+    align-items: center;
     display: flex;
-    padding: 10px;
-    background-color:brown;
-    border-radius: 20px;
+    justify-content: center;
 }
-.skill{
-    padding: 20px;
-    width: 45%;
-    background-color: burlywood;
-    border-radius: 10px;
-    font-size: 15px;
-}
-.proj{
-    padding: 20px;
-    width: 45%;
-    background-color:chartreuse;
-    border-radius: 10px;
-    font-size: 15px;
-}
-.skillproj  h1 {
-    text-decoration: underline;
-}
-
-.resume{
-    padding: 10px;
-    border-radius: 2%;
-    background-color: cornsilk;
-    text-align: center;
-}
-.resume iframe{
-    width: 60%;
-    height: 800px;
+.pt2 img{
+    width: 100%;
+    height: 400px;
     border-radius: 2%;
 }
-.resume span{
-    font-size: 20px;
-    text-decoration-line: underline;
-}
-
-.ejukesan{
-    border-radius: 2%;
+tr td {
     padding: 10px;
-    background-color:darkgray;
 }
-.ejukesan table tr, td{
-    width: 250px;
-    height: 40px;
-    background-color: beige;
+.boton{
+    padding-left: 110px;
 }
-.ejukesan table th{
-    font-size: 18px;
-}
-
-.ejukesan table td,th{
-    border-radius: 2%;
-}
-.sno{
-    width: 70px;
-}
-.ejukesan span h1{
-    
-    text-decoration: underline;
-}
-.exp td{
-    text-align: center;
-}
-.exp h1{
-    text-decoration-line: underline;
-    text-align: center;
-    padding: 10px;
-    padding-bottom: 40px;
-}
-/* .exp th{
-    background-color: aliceblue;
-} */
-.exp{
-    padding: 10px;
-    border-radius: 10px;
-    background-color:darkturquoise;
-}
-.exp th{
-    padding-bottom: 10px;
-    font-size: 20px;
-}
-
-.exp table{
-    font-size: 15px;
-    padding: 10px;
-    width: 70%;
-}
-.orgpic{
-    width: 100px;
-}
-.orgpic img{
-    width: 100px;
-    height: 100px; 
-}
-marquee{
-    font-size: 20px;
+button{
+    padding: 5px;
 }
